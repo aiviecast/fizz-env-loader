@@ -57,5 +57,5 @@ fn to_json(content: String) -> String = {
     list.map(string.split(content, "\n"), line_to_json),
     (s) => s != "",
   )
-  "{" + string.join(frags, ",") + "}"
+  "{" + list.join(frags, ",") + "}"
 }
