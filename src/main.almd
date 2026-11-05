@@ -7,7 +7,7 @@ effect fn main() -> Unit = {
   var open = true
   var blanks = 0
   while open {
-    let raw = io.read_line()
+    let raw = io.read_line() ?? ""
     match env.parse_line(raw) {
       some(kv) => { println(kv.0 + "\t" + kv.1); blanks = 0 },
       none => {
